@@ -19,7 +19,7 @@ def play_sound(filepath):
     while mixer.music.get_busy():
         continue
 
-def say(text, lang='ru', slow=False):
+def say(text, lang='en', slow=False):
     speech_file = make_speech(text, lang, slow)
     play_sound(speech_file)
     if speech_file.startswith('_'):
