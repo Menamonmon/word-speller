@@ -67,7 +67,8 @@ class MainApp(tk.Frame):
         self.reveal_btn.place(relx=.4, rely=.78)
 
     def _play_word(self, *args):
-        say(self.word.get(), 'en', False)
+        word = self.word.get() if self.word.get() != 'Type the word here' else 'There is no current word'
+        say(word, 'en', False)
 
 def test():
     root = tk.Tk()
